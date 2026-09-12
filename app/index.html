@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalBridge Operations</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        header {
+            background: #101828;
+            color: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #35c7a5;
+        }
+
+        nav a {
+            color: #d0d5dd;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #101828, #1d2939);
+            color: white;
+            padding: 60px 6%;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #b9c2d0;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1200px;
+            margin: 35px auto;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(16, 24, 40, 0.08);
+        }
+
+        .card h3 {
+            color: #667085;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .number {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .green {
+            color: #12b76a;
+        }
+
+        .blue {
+            color: #1570ef;
+        }
+
+        .orange {
+            color: #f79009;
+        }
+
+        .table-box {
+            background: white;
+            padding: 24px;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(16, 24, 40, 0.08);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid #eaecf0;
+            font-size: 14px;
+        }
+
+        th {
+            color: #667085;
+        }
+
+        .status {
+            color: #12b76a;
+            font-weight: bold;
+        }
+
+        .health {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .service {
+            background: white;
+            padding: 22px;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(16, 24, 40, 0.08);
+        }
+
+        .service strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 25px;
+            text-align: center;
+            background: #101828;
+            color: #98a2b3;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .health {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Global<span>Bridge</span></div>
+
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Shipments</a>
+        <a href="#">Services</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Operations Dashboard</h1>
+    <p>
+        Monitor international orders, shipment activity and application
+        infrastructure from one centralized operations platform.
+    </p>
+</section>
+
+<main class="container">
+
+    <h2 class="section-title">Business Overview</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>ACTIVE ORDERS</h3>
+            <div class="number blue">248</div>
+        </div>
+
+        <div class="card">
+            <h3>SHIPMENTS</h3>
+            <div class="number">1,284</div>
+        </div>
+
+        <div class="card">
+            <h3>DELIVERED</h3>
+            <div class="number green">1,102</div>
+        </div>
+
+        <div class="card">
+            <h3>PENDING</h3>
+            <div class="number orange">42</div>
+        </div>
+
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">
+        Recent Shipments
+    </h2>
+
+    <div class="table-box">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Shipment</th>
+                    <th>Destination</th>
+                    <th>Product</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>GB-10482</td>
+                    <td>Dubai, UAE</td>
+                    <td>Spices</td>
+                    <td class="status">Delivered</td>
+                </tr>
+
+                <tr>
+                    <td>GB-10483</td>
+                    <td>London, UK</td>
+                    <td>Textiles</td>
+                    <td class="status">In Transit</td>
+                </tr>
+
+                <tr>
+                    <td>GB-10484</td>
+                    <td>Toronto, Canada</td>
+                    <td>Machinery</td>
+                    <td class="status">Processing</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">
+        Infrastructure Health
+    </h2>
+
+    <div class="health">
+
+        <div class="service">
+            <strong>Web Application</strong>
+            <span class="status">● Operational</span>
+        </div>
+
+        <div class="service">
+            <strong>Docker Service</strong>
+            <span class="status">● Operational</span>
+        </div>
+
+        <div class="service">
+            <strong>Kubernetes Cluster</strong>
+            <span class="status">● Operational</span>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    GlobalBridge Operations Platform · DevOps Lab · Version 1.0
+</footer>
+
+</body>
+</html>
