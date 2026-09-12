@@ -1,0 +1,9 @@
+
+
+services:
+  web:
+    image: globalbridge-web:v1
+    container_name: globalbridge-compose
+    ports:
+      - "8080:80"
+    restart: unless-stopped
